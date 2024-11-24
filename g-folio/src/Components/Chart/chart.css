@@ -1,0 +1,26 @@
+.chart-area {
+    position: relative; /* Container ko relative position de raha hai */
+    width: 80%; /* Full width of the container */
+    height: 300px; /* Fixed height for the chart */
+    margin-top: 30px; /* Space above the chart */
+    background: rgba(4, 4, 4, 0);
+    right: 4%;
+}
+
+.chart-container {
+    position: absolute; /* Absolute positioning to force right alignment */
+    top: 10%; /* Align to top */
+ /* Align to right */
+    width: 90%; /* Chart ko 90% width de raha hai */
+    max-width: 100%; /* Max width for larger screens */
+    right: 10%;
+
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .chart-container {
+        width: 100%; /* Full width on mobile */
+        height: 200px; /* Smaller height on mobile */
+    }
+}

@@ -1,0 +1,104 @@
+.investop-container {
+    position: absolute;
+    top: 53%;
+    left: 164px;
+    width: 24%; /* Responsive full width */
+    max-width: 30%; /* Ensuring full-screen width */
+    height: 20%; /* Flexible height */
+    padding: 0%;
+    font-family: "Arsenal SC", sans-serif;
+}
+
+.status {
+    color: white;
+    font-family: "Arsenal SC", sans-serif;
+    display: flex;
+    gap: 1%;
+    width: 80%; /* Responsive width */
+    height: 50%;
+}
+
+.status h4 {
+    cursor: pointer;
+    border: 1px solid grey;
+    padding: 0%;
+    border-radius: 5px;
+    flex-grow: 2;
+    text-align: center;
+    font-size: 1.2vw; /* Adjust font size */
+}
+
+.h4.active {
+    border: 1px solid rgb(0, 255, 234);
+    color: rgb(0, 255, 255);
+}
+
+.status h3 {
+    width: 100%; /* Responsive width */
+    font-size: 1.5vw;
+}
+
+.bar1 {
+    display: flex;
+    gap: 1%;
+    background: rgba(152, 152, 152, 0.503);
+    border-radius: 5px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1%;
+    height: 60px; /* Flexible height */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bar1:hover {
+    background-color: rgba(0, 166, 255, 0.703);
+}
+
+.company, .roii, .percent {
+    color: white;
+    width: 30%; /* Responsive item width */
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+.roii {
+    text-decoration: underline;
+}
+
+.percent {
+    color: rgb(0, 188, 194);
+}
+
+.company {
+    color: black;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .investop-container {
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        padding: 1%;
+    }
+
+    .bar1 {
+        flex-direction: column; /* Stack items vertically */
+        gap: 1px;
+    }
+
+    .status {
+        flex-direction: column; /* Stack vertically on mobile */
+        align-items: center;
+        gap: 1px;
+    }
+
+    .status h3, .status h4, .company, .roii, .percent {
+        font-size: 3.5vw; /* Larger font size on mobile */
+        padding: 1%;
+        width: 100%; /* Full width for each item */
+    }
+}

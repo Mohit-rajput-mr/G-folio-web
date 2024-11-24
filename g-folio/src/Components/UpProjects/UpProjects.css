@@ -1,0 +1,149 @@
+.up-projects-container {
+  width: 50%;
+  height: 28vh;
+  background-color: #1c1c1c;
+  border-radius: 15px;
+  padding: 2%;
+  color: #fff;
+  font-family: 'Arsenal SC', sans-serif;
+  font-weight: bolder;
+  font-size: 1.5vw;
+  text-align: center;
+  position: absolute;
+  right: 3%;
+  top: 55%;
+}
+
+h2 {
+  font-size: 2vw;
+  margin-bottom: 2vh;
+  margin-top: -1vh;
+}
+
+.bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 70%;
+  margin-top: -3vh;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000;
+}
+
+.chart-bar {
+  width: 20%;
+  display: flex;
+  flex-direction: column-reverse;
+  border-radius: 5px;
+  transition: height 0.3s ease, background-color 0.3s ease;
+  position: relative;
+}
+
+.chart-bar .estimate-price {
+  background-color: #18ad1d;
+  color: #000;
+  padding: 5% 0;
+  margin-top: -10%;
+}
+
+.chart-bar .price {
+  background: none;
+  color: #000;
+  padding: 5% 0;
+  margin-bottom: 5%;
+  border-radius: 0 0 5px 5px;
+}
+
+.chart-bar:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.bar-container .chart-bar:nth-child(1) {
+  height: 45%;
+}
+
+.bar-container .chart-bar:nth-child(2) {
+  height: 60%;
+}
+
+.bar-container .chart-bar:nth-child(3) {
+  height: 55%;
+}
+
+.hover-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-color: #000;
+  padding: 1%;
+  font-size: 1vw;
+  color: #fff;
+  z-index: 10;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.grect {
+  width: 5%;
+  height: 5vh;
+  background: rgb(34, 159, 3);
+}
+
+.color-index {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  margin-top: -1vh;
+  font-size: 1rem;
+}
+
+.share-index {
+  display: flex;
+  align-items: center;
+  gap: 01%;
+  margin-top: -6vh;
+  margin-left: 50%;
+  font-size: 1rem;
+}
+
+.rcolor, .ycolor, .ocolor {
+  width: 2%;
+  height: 4vh;
+  background: rgb(0, 208, 255);
+}
+
+.ipo {
+  position: relative;
+  margin-top: -35vh;
+  right: -1%;
+  font-size: 1vw;
+  border-radius: 5px;
+  width: 15%;
+}
+
+.ipo h3 {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 2%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ipo h3:hover {
+  border: 1px solid black;
+  background-color: #ff1100;
+  color: #000;
+  cursor: pointer;
+}

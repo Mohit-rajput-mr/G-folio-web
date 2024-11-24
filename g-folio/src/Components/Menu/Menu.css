@@ -1,0 +1,131 @@
+/* Main Container */
+.menu-container {
+    background-color: rgb(49, 49, 49);
+    position: relative;
+    width: 150px;
+    height: 100vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+.menu-btn{
+    display: none;
+}
+
+/* Menu hidden by default on mobile */
+@media (max-width: 768px) {
+    .menu-container {
+        display: none; /* Hide on mobile */
+    }
+
+    .menu-btn {
+        display: block; /* Show button on mobile */
+        position: fixed;
+        top: 70px;
+        left: 2px;
+        background-color: rgb(49, 49, 49);
+        color: white;
+        border: none;
+        
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        z-index: 1000;
+    }
+
+    /* Show menu when .show-menu class added */
+    .menu-container.show-menu {
+        display: flex;
+        position: fixed;
+        top: 14%;
+        left: 0;
+        height: 100vh;
+        width: 40%;
+        max-width: 250px;
+        transform: translateX(-100%);
+        animation: slideIn 0.3s forwards;
+    }
+
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.menu-container ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.menu-container a {
+    text-decoration: none;
+    color: rgb(223, 223, 223);
+    font-size: 15px;
+    margin-left: 15px;
+    font-family: "Prompt", sans-serif;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    translate: calc(75%);
+    margin-top: 10px;    
+} 
+
+.menu1, .menu2, .menu3, .darkmode {
+    background-color: rgba(73, 72, 72, 0.518);
+    border-radius: 15px;
+    width: 140px;
+    translate: calc(0.2%);
+}
+
+.menu-bar {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;     
+    width: 100%;             
+    gap: 26px;                
+}
+
+.menu1 img, .menu2 img, .menu3 img, .darkmode img {
+    width: 15px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.darkmode img {
+    width: 20px;
+    height: auto;
+}
+
+li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.darkmode {
+    margin-top: 120px;
+}
+
+.logo-container {
+    padding-bottom: 10px; 
+    border-bottom: 1px solid white; 
+    width: 130px;
+}
+
+.menu-container li:hover {
+    background-color: #333;
+    color: #fff;
+}
